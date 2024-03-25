@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {"source": "/api/", "destination": "https://mangafy-server.vercel.app/api/"},
+      {"source": "/api/:match*", "destination": "https://mangafy-server.vercel.app/api/:match*"},
+      {"source": "/(.*)","destination": "/index.html"
+      }
+    ]
+}
