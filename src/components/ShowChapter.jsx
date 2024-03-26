@@ -10,7 +10,7 @@ function ShowChapter(props){
     const chapterId = useLocation().search.substring(1);
     const [loaded,setLoaded]=useState(false);
     function fetchChapter(){
-        axios.get(`/api/chapter/`,{
+        axios.get(`${import.meta.env.VITE_API_URL}/api/chapter/`,{
             params:{
                 chapter_id : chapterId
             }

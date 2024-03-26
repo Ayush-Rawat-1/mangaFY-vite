@@ -16,10 +16,11 @@ function Front(props){
       setLatestManga(newMangaArray);
       setLoaded(true);
     }
+    console.log(import.meta.env.VITE_API_URL)
     function fetchMangaArray(){
         handleLatestManga([]);
         setLoaded(false);
-        axios.get(`/api/front/`,{
+        axios.get(`${import.meta.env.VITE_API_URL}/api/front/`,{
             params:{
             page:page
             }
@@ -34,7 +35,7 @@ function Front(props){
 
     function fetchNewsArray(){
         setLoaded(false);
-        axios.get(`/api/news/`)
+        axios.get(`${import.meta.env.VITE_API_URL}/api/news/`)
         .then((response)=>{
             handleLatestManga(response.data);
         })
@@ -45,7 +46,7 @@ function Front(props){
     
     function fetchSearchArray(){
         setLoaded(false);
-        axios.get(`/api/mangaSearch/`,{
+        axios.get(`${import.meta.env.VITE_API_URL}/api/mangaSearch/`,{
             params:{
                 manga_name:props.search
             }

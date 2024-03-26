@@ -11,7 +11,7 @@ function MangaPage(props) {
     const [detailNews,setDetailNews]=useState([]);
     
     function fetchChapter(){
-        axios.get(`/api/manga/`,{
+        axios.get(`${import.meta.env.VITE_API_URL}/api/manga/`,{
             params:{
                 manga_id : details.id
             }
@@ -23,7 +23,7 @@ function MangaPage(props) {
     }
 
     function fetchNews(){
-        axios.get(`/api/newsPage/`,{
+        axios.get(`${import.meta.env.VITE_API_URL}/api/newsPage/`,{
             params:{
                 news_id:details.details_api.id,
                 news_title:details.details_api.title,
