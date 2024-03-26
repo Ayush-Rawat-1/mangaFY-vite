@@ -16,7 +16,6 @@ function Front(props){
       setLatestManga(newMangaArray);
       setLoaded(true);
     }
-    console.log(import.meta.env.VITE_API_URL)
     function fetchMangaArray(){
         handleLatestManga([]);
         setLoaded(false);
