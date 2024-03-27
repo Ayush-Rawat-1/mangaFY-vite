@@ -6,6 +6,7 @@ import Panel from "./Pages/Panel";
 import Chapter from "./Pages/Chapter";
 import News from "./Pages/News";
 import Search from "./Pages/Search";
+import Error from "./Pages/Error";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -38,7 +39,7 @@ function App() {
                 <Route path="/chapter" element={<Chapter mode={mode} setMode={setMode} changeMode={handleBtnClick} />} />
                 <Route path="/news" element={<News mode={mode} setMode={setMode} changeMode={handleBtnClick} />} />
                 <Route path="/search/:name" element={<Search mode={mode} setMode={setMode} changeMode={handleBtnClick} />} />
-                
+                <Route path="*" element={<Error mode={mode} setMode={setMode} changeMode={handleBtnClick} />} />
             </Routes>
         </BrowserRouter>
     </div></main></ThemeProvider>
