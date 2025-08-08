@@ -33,8 +33,7 @@ npm install npm@latest -g
 
 1. Clone the repository to your local machine.
 
-sh
-git clone [https://github.com/your_username/MangaFY.git](https://github.com/Ayush-Rawat-1/mangaFY-vite)
+git clone [https://github.com/Ayush-Rawat-1/mangaFY-vite.git](https://github.com/Ayush-Rawat-1/mangaFY-vite)
 
 
 2. Install the necessary packages.
